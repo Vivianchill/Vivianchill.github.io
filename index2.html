@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>請選擇任一個選項!</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #fff0f5;
+        }
+        .message-box {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 60%;
+            background-color: #ffeef8;
+            font-size: 22px; /* 調整介紹文字的字體大小 */
+        }
+        .option-container {
+            display: flex; /* 使用flex讓選項按鈕橫向排列 */
+            justify-content: center; /* 將選項按鈕置中 */
+            gap: 30px; /* 增加選項間的水平間距 */
+            margin-top: 20px; /* 增加頂部間距 */
+        }
+        .option {
+            padding: 10px 20px;
+            background: #ffb6c1;
+            color: #fff;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 22px; /* 增加選項字體大小 */
+            display: inline-block;
+            width: 120px; /* 設定每個選項按鈕的橫向寬度，這裡調整為 120px */
+        }
+        .option:hover {
+            background: #ff69b4;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="font-size: 24px; color: #2e3a8c;">恭喜全部答對啦!<br>現在殼以拿起手邊的禮物對照數字編號<br>-> 點選對應的數字按鍵<br>-> 會有不同禮物朋朋的介紹喔!<br>建議從一號朋友開始開箱哈哈。</h1>
+
+    <div class="option-container">
+        <button class="option" onclick="showMessage(1)">選項 1</button>
+        <button class="option" onclick="showMessage(2)">選項 2</button>
+        <button class="option" onclick="showMessage(3)">選項 3</button>
+        <button class="option" onclick="showMessage(4)">選項 4</button>
+        <button class="option" onclick="showMessage(5)">選項 5</button>
+    </div>
+
+    <div id="messageBox" class="message-box hidden">
+        <p id="message"></p>
+    </div>
+
+    <script>
+        // 根據選擇的選項顯示不同的文字訊息
+        function showMessage(option) {
+            const messageBox = document.getElementById('messageBox');
+            const message = document.getElementById('message');
+
+            // 根據不同選項更新顯示的文字
+            switch (option) {
+                case 1:
+                    message.textContent = "你選擇了選項 1！這是關於選項 1 的介紹文字。";
+                    break;
+                case 2:
+                    message.textContent = "你選擇了選項 2！這是關於選項 2 的介紹文字。";
+                    break;
+                case 3:
+                    message.textContent = "你選擇了選項 3！這是關於選項 3 的介紹文字。";
+                    break;
+                case 4:
+                    message.textContent = "你選擇了選項 3！這是關於選項 4 的介紹文字。";
+                    break;
+                case 5:
+                    message.textContent = "你選擇了選項 3！這是關於選項 5 的介紹文字。";
+                    break;
+                default:
+                    message.textContent = "請選擇一個有效的選項！";
+            }
+
+            // 顯示訊息框
+            messageBox.classList.remove('hidden');
+        }
+    </script>
+
+</body>
+</html>
