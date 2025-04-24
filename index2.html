@@ -50,11 +50,12 @@
     <h1 style="font-size: 24px; color: #2e3a8c;">恭喜全部答對啦!<br>現在殼以拿起手邊的禮物對照數字編號<br>-> 點選對應的數字按鍵<br>-> 會有不同禮物朋朋的介紹喔!<br>建議從一號朋友開始開箱哈哈。</h1>
 
     <div class="option-container">
-        <button class="option" onclick="showMessage(1)">選項 1</button>
+        <button class="option" onclick="showMessage(1)">0號朋友</button>
         <button class="option" onclick="showMessage(2)">選項 2</button>
         <button class="option" onclick="showMessage(3)">選項 3</button>
         <button class="option" onclick="showMessage(4)">選項 4</button>
         <button class="option" onclick="showMessage(5)">選項 5</button>
+        <button class="option" onclick="showMessage(6)">選項 5</button>
     </div>
 
     <div id="messageBox" class="message-box hidden">
@@ -70,7 +71,7 @@
             // 根據不同選項更新顯示的文字
             switch (option) {
                 case 1:
-                    message.textContent = "你選擇了選項 1！這是關於選項 1 的介紹文字。";
+                    message.textContent = "日系袋袋。";
                     break;
                 case 2:
                     message.textContent = "你選擇了選項 2！這是關於選項 2 的介紹文字。";
@@ -82,6 +83,9 @@
                     message.textContent = "你選擇了選項 3！這是關於選項 4 的介紹文字。";
                     break;
                 case 5:
+                    message.textContent = "你選擇了選項 3！這是關於選項 5 的介紹文字。";
+                    break;
+                case 6:
                     message.textContent = "你選擇了選項 3！這是關於選項 5 的介紹文字。";
                     break;
                 default:
