@@ -51,11 +51,12 @@
 
     <div class="option-container">
         <button class="option" onclick="showMessage(1)">0號朋友</button>
-        <button class="option" onclick="showMessage(2)">選項 2</button>
-        <button class="option" onclick="showMessage(3)">選項 3</button>
-        <button class="option" onclick="showMessage(4)">選項 4</button>
-        <button class="option" onclick="showMessage(5)">選項 5</button>
-        <button class="option" onclick="showMessage(6)">選項 5</button>
+        <button class="option" onclick="showMessage(2)">1號朋友</button>
+        <button class="option" onclick="showMessage(3)">2號朋友</button>
+        <button class="option" onclick="showMessage(4)">3號朋友</button>
+        <button class="option" onclick="showMessage(5)">4號朋友</button>
+        <button class="option" onclick="showMessage(6)">5號朋友</button>
+        <button class="option" onclick="showMessage(7)">6號朋友</button>
     </div>
 
     <div id="messageBox" class="message-box hidden">
@@ -71,25 +72,28 @@
             // 根據不同選項更新顯示的文字
             switch (option) {
                 case 1:
-                    message.textContent = "日系袋袋。";
+                    message.textContent = "日系袋袋。出門耐裝，A4紙放進去也不會折到。";
                     break;
                 case 2:
-                    message.textContent = "你選擇了選項 2！這是關於選項 2 的介紹文字。";
+                    message.textContent = "好運按鍵。聽說多按幾下後口試都會過。(江湖傳言xD)";
                     break;
                 case 3:
-                    message.textContent = "你選擇了選項 3！這是關於選項 3 的介紹文字。";
+                    message.textContent = "護照套。出門逛逛看到的～港覺會適合旅行小達人Lola🧳。";
                     break;
                 case 4:
-                    message.textContent = "你選擇了選項 3！這是關於選項 4 的介紹文字。";
+                    message.textContent = "雙子星小小包。記得Lola也喜歡雙子星～港覺會適合像星星一樣耀眼🌟的雙子朋朋Lola。";
                     break;
                 case 5:
-                    message.textContent = "你選擇了選項 3！這是關於選項 5 的介紹文字。";
+                    message.textContent = "龍貓拼圖。主打一個可愛療癒風。有機會再一起去台中玩耍嘿嘿。";
                     break;
                 case 6:
-                    message.textContent = "你選擇了選項 3！這是關於選項 5 的介紹文字。";
+                    message.textContent = "雀雀抱枕。適合拿出來捏一捏紓壓。寓意是祝準畢業生展翅高飛、鵬程萬里！祝Lola畢業快樂！(因為大隻的鳥類沒那麼可愛，所以送可愛的雀雀。)";
+                    break;
+                 case 7:
+                    message.textContent = "熊熊小包。可手提也可側背(可調長度)。選白綠色是搭配Lola白白的外套跟綠色的耳機(殼)。綠綠的寓意是🍀。祝Lola生日快樂、一切順利！";
                     break;
                 default:
-                    message.textContent = "請選擇一個有效的選項！";
+                    message.textContent = "請選擇一個按鍵。";
             }
 
             // 顯示訊息框
